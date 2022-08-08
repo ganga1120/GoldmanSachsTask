@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBE-CH-3sd">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HOME-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="GoldmanSachsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThF-q4-obD">
+                                <rect key="frame" x="0.0" y="54" width="320" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qPl-w5-23g">
+                                        <rect key="frame" x="10" y="0.0" width="300" height="50"/>
+                                        <subviews>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-eI-saB">
+                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <date key="minimumDate" timeIntervalSinceReferenceDate="-187966800">
+                                                    <!--1995-01-17 11:00:00 +0000-->
+                                                </date>
+                                            </datePicker>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Nz2-ho-vUI">
+                                                <rect key="frame" x="101.5" y="0.0" width="97" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-st-MlR">
+                                                <rect key="frame" x="203.5" y="9.5" width="96.5" height="31"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                                <connections>
+                                                    <action selector="searchButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oGs-FF-h41"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qPl-w5-23g" secondAttribute="bottom" id="0xL-OP-Hl8"/>
+                                    <constraint firstAttribute="height" constant="50" id="3ca-N9-RzR"/>
+                                    <constraint firstAttribute="trailing" secondItem="qPl-w5-23g" secondAttribute="trailing" constant="10" id="5NI-B1-nv2"/>
+                                    <constraint firstItem="qPl-w5-23g" firstAttribute="top" secondItem="ThF-q4-obD" secondAttribute="top" id="aFd-G6-dwV"/>
+                                    <constraint firstItem="qPl-w5-23g" firstAttribute="leading" secondItem="ThF-q4-obD" secondAttribute="leading" constant="10" id="cC0-gs-ffV"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Olu-Qs-SID">
+                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Olu-Qs-SID" secondAttribute="trailing" id="AFk-ow-uTD"/>
+                            <constraint firstItem="Olu-Qs-SID" firstAttribute="top" secondItem="ThF-q4-obD" secondAttribute="bottom" constant="20" id="IV7-93-i90"/>
+                            <constraint firstItem="ThF-q4-obD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="dAG-mt-PeP"/>
+                            <constraint firstAttribute="bottom" secondItem="Olu-Qs-SID" secondAttribute="bottom" id="f8y-2G-kLg"/>
+                            <constraint firstItem="ThF-q4-obD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pKS-pl-JUq"/>
+                            <constraint firstItem="Olu-Qs-SID" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ttx-4O-1ol"/>
+                            <constraint firstItem="ThF-q4-obD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w5L-Ia-WuJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME" id="7dd-qF-LH5"/>
+                    <connections>
+                        <outlet property="endDatePicker" destination="Nz2-ho-vUI" id="oCh-9b-uLL"/>
+                        <outlet property="searchButton" destination="sE4-st-MlR" id="kjT-hO-Frd"/>
+                        <outlet property="startDatePicker" destination="CIg-eI-saB" id="NdZ-mE-kAa"/>
+                        <outlet property="tableView" destination="Olu-Qs-SID" id="fc7-Z5-g61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1976.25" y="65.492957746478879"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gZw-Wt-dCt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aBE-CH-3sd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aut-q4-67H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DFa-4X-MAF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36c-me-azX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978.75" y="65.492957746478879"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
